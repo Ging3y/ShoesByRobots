@@ -56,14 +56,32 @@ class Shoe_DAO(object):
         except:
             reviews_ = "No reviews found"
 
+        # Get image source
+        try:
+            image_source = str(soup.find_all(class_ = "slider"))
+            soup_image = bs(image_source, "html.parser")
+            image_ = str(soup_image.find_all('picture')[1])
+            pos = image_.find('srcset=') + 8
+            image_ = image_[pos:]
+            pos = image_.find('/>') - 1
+            image_ = image_[:pos]
+
+
+        except:
+            image_ = "No source found"
+
+        print(image_)
+
         self.name = name_
         self.type = type_
+        self.image = image_
         self.price = price_
         self.description = description_
         self.stars = stars_
         self.reviews = reviews_
 
         self.data = {'name': self.name,
+                     'image': self.image,
                      'type': self.type,
                      'price': self.price,
                      'description': self.description,
@@ -83,16 +101,12 @@ class Shoe_DAO(object):
 """ TRIAL RUN """
 
 """
-shoe_links = ["https://www.nike.com/t/air-jordan-1-retro-high-og-shoe-WR35rK",
-              "https://www.nike.com/t/air-jordan-xxxii-mens-basketball-shoe-qqbTq5",
-              "https://www.nike.com/t/air-jordan-3-retro-mens-shoe-xrzNYK/136064-111"]
+shoe_links = ["https://www.nike.com/t/air-vapormax-flyknit-2-mens-running-shoe-zcHs9Q/AR5406-600"]
 
 for link in shoe_links:
 
     shoe = Shoe_DAO(link)
     shoe_info = shoe.getInfo()
-    print(shoe_info)
     #shoe.printInfo()
     #print("\n")
 """
-
