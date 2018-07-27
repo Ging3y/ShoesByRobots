@@ -8,5 +8,5 @@ def homepage(request):
 
 def shoe_info(request):
     link_ = request.GET['shoe_link']
-    print(link_)
-    return render(request, 'shoe_info.html', {'link': link_})
+    shoe_info = Shoe_DAO(link_)
+    return render(request, 'shoe_info.html', shoe_info.getInfo())

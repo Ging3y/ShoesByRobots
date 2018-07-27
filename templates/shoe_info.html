@@ -8,7 +8,17 @@
 
     <h1> THIS IS THE MMMM SHOE INFO PAGE</h1>
 
-    <h2> AND THIS IS THE MOFO LINK {{ link }} </h2>
+    <h2> Shoe name: {{ name }} Rating: {{ rating }}</h2>
+    <h4> Shoe type: {{ type }} </h4>
+    <h4> Shoe price: ${{ price }}0</h4>
+    <h4> Description: {{ description }} </h4>
+
+    {% for review in reviews %}
+        <ol> {{ review }} </ol>
+    {% endfor %}
+
+
+    <br/>
     <h3> <a href="{% url 'index' %}"> Go back </a></h3>
 
 </body>

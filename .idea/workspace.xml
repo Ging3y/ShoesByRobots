@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e95a3d5-5879-4ff9-bc78-85662b8caeeb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoesByRobots/settings.py" afterPath="$PROJECT_DIR$/ShoesByRobots/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoesByRobots/urls.py" afterPath="$PROJECT_DIR$/ShoesByRobots/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoesByRobots/views.py" afterPath="$PROJECT_DIR$/ShoesByRobots/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shoe_info.html" afterPath="$PROJECT_DIR$/templates/shoe_info.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="shoe_info.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shoe_info.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/shoe_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="360">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -45,8 +43,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShoesByRobots/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -64,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_shoe_info.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_shoe_info.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShoesByRobots/classes/get_shoe_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="626">
+              <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -139,11 +137,11 @@
         <option value="$PROJECT_DIR$/ShoesByRobots/settings.py" />
         <option value="$PROJECT_DIR$/ShoesByRobots/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/shoe_info.html" />
         <option value="$PROJECT_DIR$/ShoesByRobots/exten/get_shoe_info.py" />
         <option value="$PROJECT_DIR$/ShoesByRobots/classes/__init__.py" />
-        <option value="$PROJECT_DIR$/ShoesByRobots/views.py" />
         <option value="$PROJECT_DIR$/ShoesByRobots/classes/get_shoe_info.py" />
+        <option value="$PROJECT_DIR$/ShoesByRobots/views.py" />
+        <option value="$PROJECT_DIR$/templates/shoe_info.html" />
       </list>
     </option>
   </component>
@@ -586,14 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shoe_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShoesByRobots/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -601,6 +591,14 @@
           <folding>
             <element signature="e#637#669#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShoesByRobots/classes/get_shoe_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -614,18 +612,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShoesByRobots/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShoesByRobots/classes/get_shoe_info.py">
+    <entry file="file://$PROJECT_DIR$/templates/shoe_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
         </state>
       </provider>
