@@ -22,3 +22,4 @@ urlpatterns = [
     path('', views.homepage, name = 'index'),
     path('shoe_info/', views.shoe_info, name = 'shoe_info'),
 ]
+

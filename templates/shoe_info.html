@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{%  extends 'header.html' %}
+
+{% block content %}
 
     <h1> Shoe image </h1>
 
@@ -23,5 +19,4 @@
     <br/>
     <h3> <a href="{% url 'index' %}"> Go back </a></h3>
 
-</body>
-</html>
+{% endblock %}

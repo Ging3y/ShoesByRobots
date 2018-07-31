@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ShoesByRobots</title>
-</head>
-<body>
+{% extends 'header.html' %}
 
+{% block content %}
     <h1> ShoesByRobots </h1>
     <p> Enter your link below: </p>
     <form action = "{%  url 'shoe_info' %}" >
@@ -15,5 +10,4 @@
 
     </form>
 
-</body>
-</html>
+{% endblock %}
