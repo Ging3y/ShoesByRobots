@@ -52,23 +52,35 @@ class Shoe_DAO(object):
 
         # Get Reviews
         try:
-            reviews_, sentiments_ = [], []
+            reviews_ = []
             review_container = list(soup.find_all(class_="review mb10-sm"))
 
             sid = SentimentIntensityAnalyzer()
+            pos_scores, neg_scores = [], []
+            
             for review in review_container:
                 soup_review = bs(str(review), "html.parser")
                 review_ = str(soup_review.find_all('p')[-1].contents[0])
                                 
                 # Find the sentiment
                 ss = sid.polarity_scores(review_)
-                for k in ss:
-                    sentiments_.append("{0}: {1}, ".format(k, ss[k]))
+                sentiment_ = ''
                 
-                reviews_.append(review_)
+                for k in ['neg', 'pos']:
+                    sentiment_ += "{0}: {1} ".format(k, ss[k])
+                    
+                pos_scores.append(float(ss['pos']))
+                neg_scores.append(float(ss['neg']))
+                    
+                reviews_.append(review_ + "\n" + str(sentiment_))
+                            
+            k = 0
+            for x, y in zip(pos_scores, neg_scores):
+                if x > y:
+                    k += 1
+            
         except:
             reviews_ = "No reviews found"
-            sentiments_ = "Not able to analyze sentiments"
             
         # Get image source
         try:
@@ -87,8 +99,7 @@ class Shoe_DAO(object):
 
         except:
             image_ = "No source found"
-
-
+            
         self.name = name_
         self.type = type_
         self.image = image_
@@ -97,8 +108,7 @@ class Shoe_DAO(object):
         self.description = description_
         self.stars = stars_
         self.reviews = reviews_
-        self.sentiments = sentiments_
-
+        self.k = k
         self.data = {'name': self.name,
                      'image': self.image,
                      #'image_2': self.image_2,
@@ -107,7 +117,7 @@ class Shoe_DAO(object):
                      'description': self.description,
                      'rating': self.stars,
                      'reviews': self.reviews,
-                     'sentiments': self.sentiments}
+                     'k': self.k}
         print("Shoe picture 1: " + str(self.image))
 #        print("Shoe picture 2: " + str(self.image_2))
         return self.data

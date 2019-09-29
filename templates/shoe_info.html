@@ -4,8 +4,8 @@
 
     <h1> Shoe image </h1>
 
-    <img src={{ image }} alt="Shoe not found"/>
-    <img src={{ image_2 }} alt="Shoe not found"/>
+    <img src={{ image }} alt="Shoe not found", height=40%, width=40%/>
+    <!-- <img src={{ image_2 }} alt="Shoe not found"/> -->
 
     <h2> Shoe name: {{ name }} Rating: {{ rating }}</h2>
     <h4> Shoe type: {{ type }} </h4>
@@ -13,10 +13,12 @@
     <h4> Description: {{ description }} </h4>
 
     {% for review in reviews %}
+        
         <ol> {{ review }} </ol>
     {% endfor %}
 
-
+    <h4> Overall Positive Reviews: {{k}} <h4>
+    <p> More analysis will follow. Potential options: Naive Bayes Classifier, Normal Distributions, BoW's, Embeddings, etc. </p>
     <br/>
     <h3> <a href="{% url 'index' %}"> Go back </a></h3>
 
